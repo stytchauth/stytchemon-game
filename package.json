@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js",
+    "build": "webpack --config webpack.config.js --env production --env STYTCH_PUBLIC_TOKEN=$STYTCH_PUBLIC_TOKEN",
     "dev": "npm run build && webpack-dev-server --open --config webpack.config.js",
     "start": "node server.js"
   },

@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "stytchemon",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -19,9 +19,11 @@
     "webpack-dev-server": "^4.13.3"
   },
   "dependencies": {
-    "@stytch/vanilla-js": "^0.12.0",
+    "@stytch/vanilla-js": "^2.0.1",
+    "dotenv": "^16.3.1",
     "kaboom": "^2000.2.10",
     "lodash": "^4.17.21",
+    "process": "^0.11.10",
     "random-words": "^1.3.0"
   }
 }

@@ -17,15 +17,11 @@ import {
     VALIDATE_SMS_OTP_TEXT,
     SEND_EMAIL_OTP_TEXT,
     VALIDATE_EMAIL_OTP_TEXT,
-    EXIT_COMPUTER_TEXT
+    EXIT_COMPUTER_TEXT,
+    EXIT_COMPUTER_WITH_KEY
 } from "./constants";
 import { addPointsCounter, addStytchWordmark, addPlaysLeft, sendEmailOTP, sendSMSOTP, authOTP } from "./shared";
-import { addStytchResponse, removePlay } from "./utils"
 import { clearStorage } from "./storage";
-
-
-const gmailUrl = "https://mail.google.com/mail/u/0/#search/from%3A(login%40test.stytch.com)"
-const magicLinkUrl = "https://stytchemon.vercel.app/magic_links/index.html"
 
 loadSprite("julianna", "/sprites/julianna.png")
 loadSprite("zack", "/sprites/zack.png")
@@ -141,7 +137,7 @@ scene(AUTH_FLOW, (levelIdx) => {
 	addLevel(levels[levelIdx], {
 		width: 64,
 		height: 64,
-		pos: vec2(width() / 2 - (64 * 13) / 2, 64),
+		pos: vec2(width() / 2 - (64 * 13) / 2, 0),
 		"=": () => [
 			sprite("brick", {width: 64, height: 64}),
 			area(),
@@ -153,9 +149,9 @@ scene(AUTH_FLOW, (levelIdx) => {
 			solid()
 		],
 		"$": () => [
-			sprite("computer", {width: 150, height: 150}),
+			sprite("arcade", {width: 150, height: 150}),
 			area(),
-			"computer"
+			"arcade"
 		],
 		"@": () => [
 			sprite("dino", DINO_SIZE),
@@ -214,7 +210,7 @@ scene(AUTH_FLOW, (levelIdx) => {
 	});
 
     add([
-        pos(width() / 2 - 310, 750),
+        pos(width() / 2 - 310, 700),
         sprite("phone", {
             width: 100,
             height: 100,
@@ -222,7 +218,7 @@ scene(AUTH_FLOW, (levelIdx) => {
     ]);
 
     add([
-        pos(width() / 2 + 210, 760),
+        pos(width() / 2 + 215, 710),
         sprite("email", {
             width: 100,
             height: 75,
@@ -435,7 +431,7 @@ scene(AUTH_FLOW, (levelIdx) => {
             } else {
                 text.scale = vec2(1)
                 text.color = rgb()
-            }
+            }  
         })
     })
 
@@ -446,7 +442,7 @@ scene(AUTH_FLOW, (levelIdx) => {
             setAuthKey(false);
             go(AUTH_FLOW, 2);
 		} else {
-			dialog.say("you got no key!")
+			dialog.say("you need a session key!")
 		}
 	})
 

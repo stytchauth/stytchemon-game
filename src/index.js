@@ -3,7 +3,7 @@ import { AUTH_FLOW } from "./scenes";
 import { getSavedScene } from "./storage";
 
 kaboom({
-  scale: 0.9,
+  scale: .8,
   background: [243, 252, 249],
 });
 

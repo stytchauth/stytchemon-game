@@ -39,3 +39,13 @@ npm install
 npm run dev
 ```
 The app is now available at http://localhost:9000/, have fun!
+
+## Get help and join the community
+
+#### :speech_balloon: Stytch community Slack
+
+Join the discussion, ask questions, and suggest new features in our ​[Slack community](https://join.slack.com/t/stytch/shared_invite/zt-nil4wo92-jApJ9Cl32cJbEd9esKkvyg)!
+
+#### :question: Need support?
+
+Check out the [Stytch Forum](https://forum.stytch.com/) or email us at [support@stytch.com](mailto:support@stytch.com).

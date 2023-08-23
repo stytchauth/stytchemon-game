@@ -3,7 +3,9 @@ import { TEXT_SIZE } from "./constants";
 import { StytchHeadlessClient } from '@stytch/vanilla-js/headless';
 import { addStytchResponse } from "./utils";
 
-export const stytch = new StytchHeadlessClient('public-token-test-4bb2fd2f-2b71-4eb9-a37e-752b3900c102');
+export const stytch = new StytchHeadlessClient(
+    process.env.STYTCH_PUBLIC_TOKEN,
+);
 
 loadSprite("stytch", "/sprites/stytch.png");
 loadSprite("coin", "/sprites/coin.png");
@@ -49,8 +51,7 @@ export const sendEmailOTP = () => {
     if (email != "" && email != null) {
         play("wooosh");
         stytch.otps.email.loginOrCreate(email, {
-            login_template_id: 'renderatl',
-            signup_template_id: 'renderatl',
+            expiration_minutes: 5,
         })
         .then(response => {
             addStytchResponse(response, "stytchResponse");

@@ -44,7 +44,7 @@ The app is now available at http://localhost:9000/, have fun!
 
 #### :speech_balloon: Stytch community Slack
 
-Join the discussion, ask questions, and suggest new features in our ​[Slack community](https://join.slack.com/t/stytch/shared_invite/zt-nil4wo92-jApJ9Cl32cJbEd9esKkvyg)!
+Join the discussion, ask questions, and suggest new features in our ​[Slack community](https://stytch.slack.com/join/shared_invite/zt-2f0fi1ruu-ub~HGouWRmPARM1MTwPESA)!
 
 #### :question: Need support?
 

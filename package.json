@@ -19,7 +19,7 @@
     "webpack-dev-server": "^4.13.3"
   },
   "dependencies": {
-    "@stytch/vanilla-js": "^2.0.1",
+    "@stytch/vanilla-js": "^2.2.2",
     "dotenv": "^16.3.1",
     "kaboom": "^2000.2.10",
     "lodash": "^4.17.21",
